@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# Next.js builds
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# env files (secrets) – keep the .env.example files
+.env*
+!.env.example
+
+# logs & OS / editor files
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/
+*.pem
+
+ST-SPACE_CLAUDE_REQUIREMENTS.md

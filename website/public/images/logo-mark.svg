@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- TODO: replace with client's official vector logo -->
+  <defs>
+    <linearGradient id="g1" x1="8" y1="6" x2="54" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD54A"/><stop offset=".5" stop-color="#F2B705"/><stop offset="1" stop-color="#C8930A"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="56" y1="58" x2="10" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD54A"/><stop offset=".55" stop-color="#F2B705"/><stop offset="1" stop-color="#C8930A"/>
+    </linearGradient>
+  </defs>
+  <path d="M54 6H20L8 18v10l18 10h16L22 27v-6l5-5h21z" fill="url(#g1)"/>
+  <path d="M8 18v10l18 10h5L14 28v-8z" fill="#0A0A0A" fill-opacity=".35"/>
+  <path d="M10 58h34l12-12V36L38 26H22l20 11v6l-5 5H16z" fill="url(#g2)"/>
+  <path d="M56 46V36L38 26h-5l17 10v8z" fill="#0A0A0A" fill-opacity=".35"/>
+</svg>

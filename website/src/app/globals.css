@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-black: #0a0a0a;
+  --color-brand-charcoal: #141414;
+  --color-brand-graphite: #1f1f1f;
+  --color-brand-gold: #f2b705;
+  --color-brand-gold-light: #ffd54a;
+  --color-brand-gold-dark: #c8930a;
+  --color-brand-white: #ffffff;
+  --color-brand-gray: #b5b5b5;
+  --color-brand-offwhite: #f7f7f5;
+  /* Darker gold for text on light backgrounds (WCAG AA: ~5.4:1 on white) */
+  --color-brand-gold-ink: #8a6400;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility bg-gold-gradient {
+  background-image: linear-gradient(135deg, #ffd54a 0%, #f2b705 50%, #c8930a 100%);
+}
+
+@utility text-gold-gradient {
+  background-image: linear-gradient(135deg, #ffd54a 0%, #f2b705 50%, #c8930a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Gold marker behind a key word on light backgrounds (keeps text dark for contrast) */
+@utility highlight-gold {
+  background-image: linear-gradient(transparent 60%, rgb(242 183 5 / 0.9) 60%, rgb(242 183 5 / 0.9) 92%, transparent 92%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-inline: 0.1em;
+}
+
+/* Angled corners, echoing the flyer's clipped frames */
+@utility clip-angle {
+  clip-path: polygon(0 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 2.5rem 100%, 0 calc(100% - 2.5rem));
+}
+@utility clip-angle-sm {
+  clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 0 100%);
+}
+@utility clip-hex {
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+
+/* Thin diagonal gold lines used as a background texture */
+@utility bg-gold-lines {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent 0,
+    transparent 46px,
+    rgb(242 183 5 / 0.07) 46px,
+    rgb(242 183 5 / 0.07) 47px
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-brand-black);
+  color: var(--color-brand-white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 3px;
+}
+
+/* Scroll reveal: only hide content when JavaScript can reveal it again */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms ease,
+      transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
