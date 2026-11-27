@@ -39,7 +39,7 @@ export type FacilityType = (typeof FACILITY_TYPES)[number];
 export const FACILITY_STATUSES = ["draft", "published"] as const;
 export type FacilityStatus = (typeof FACILITY_STATUSES)[number];
 
-export const PRICE_PERIODS = ["", "per month", "per year", "per day", "per sq m", "one-off"] as const;
+export const PRICE_PERIODS = ["", "per month", "per year", "per day", "per sq m", "one-off","2hrs","1hr", "30mins","3hrs"] as const;
 export type PricePeriod = (typeof PRICE_PERIODS)[number];
 
 export const MAX_UPLOAD_BYTES = 4 * 1024 * 1024; // stays under Vercel's 4.5 MB request limit

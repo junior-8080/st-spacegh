@@ -1,0 +1,24 @@
+ADMIN_EMAIL=info@st-spacegh.com
+ADMIN_PASSWORD=Space@1
+JWT_SECRET=iFjqLizc9p5QTJpWhto8nf3qfQEEcCtTe2jC/UjFRV8Lld98KHaUi80dusoU02St
+
+MONGODB_URI=mongodb://aabdulmukhsin_db_user:YAZmNb7ivzZzF4Jk@ac-coo0hfr-shard-00-00.mluxsz6.mongodb.net:27017,ac-coo0hfr-shard-00-01.mluxsz6.mongodb.net:27017,ac-coo0hfr-shard-00-02.mluxsz6.mongodb.net:27017/st-spacegh?appName=Cluster0&tls=true&authSource=admin&replicaSet=atlas-14l93r-shard-0
+
+# NextAuth — generate a secret with: openssl rand -base64 32
+NEXTAUTH_SECRET=0263ab00
+NEXTAUTH_URL=http://localhost:3000
+
+# Cloudflare R2 — get these from Cloudflare Dashboard > R2 > Manage R2 API Tokens
+R2_ACCOUNT_ID=c5a0ea0d22619709381e013af68bd3f2
+R2_ACCESS_KEY_ID=541037f5332ecad4632700e52d3b5d38
+R2_SECRET_ACCESS_KEY=419fd967e39877d2c776866e840be8d557e5e1f0e30755ec4c0f5ce0335b0a87
+R2_BUCKET_NAME=mukarocore-media
+# Public URL: either https://pub-<hash>.r2.dev (enable in R2 bucket settings) or your custom domain
+R2_PUBLIC_URL=https://pub-3da549d6f63842efb308f4f9dcdf912b.r2.dev
+
+
+
+WEBSITE_ORIGIN=http://localhost:3000
+NEXT_PUBLIC_WEBSITE_URL=http://localhost:3000
+WEBSITE_URL=http://localhost:3000
+REVALIDATE_SECRET=cb38af830d344811a1ae3b61ec2a15f45b586d7408186ddc
