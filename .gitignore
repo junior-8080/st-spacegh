@@ -18,5 +18,6 @@ npm-debug.log*
 .idea/
 .vscode/
 *.pem
+env_import.txt
 
 ST-SPACE_CLAUDE_REQUIREMENTS.md
